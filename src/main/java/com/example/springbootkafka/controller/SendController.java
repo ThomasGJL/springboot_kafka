@@ -19,7 +19,7 @@ public class SendController {
     Sender sender;
 
     @RequestMapping(value = "/sender", method = RequestMethod.POST)
-    public void exec(HttpServletRequest request, HttpServletResponse response,String data) throws IOException{
+    public void exec(HttpServletRequest request, HttpServletResponse response, String data) throws IOException{
         this.sender.send("testtopic",data);
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/json");
